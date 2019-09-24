@@ -1,0 +1,727 @@
+{
+    "name": "Fitbit_IoTLT",
+    "components": [
+        {
+            "name": "/Main",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "d25b822d-7926-34cb-8dbb-2d171e0fffac",
+                        "fromProperty": "messageReceived",
+                        "toId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "toProperty": "fetch"
+                    },
+                    {
+                        "fromId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "fromProperty": "heartrate",
+                        "toId": "1e2a1cd6-614b-79ac-e2aa-cb360ea68b84",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "b096e013-883f-8459-4937-fb04258e6b12",
+                        "fromProperty": "timerFinished",
+                        "toId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "toProperty": "fetch"
+                    },
+                    {
+                        "fromId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "fromProperty": "completed",
+                        "toId": "b096e013-883f-8459-4937-fb04258e6b12",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "fromProperty": "time",
+                        "toId": "31988247-d925-567b-2dad-399d41a16eb7",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "fromProperty": "circle1",
+                        "toId": "1204d935-11f3-3349-a170-759b01b05506",
+                        "toProperty": "width"
+                    },
+                    {
+                        "fromId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "fromProperty": "circle2",
+                        "toId": "d85644af-a407-c02c-6cca-48eab5ff6c5e",
+                        "toProperty": "width"
+                    },
+                    {
+                        "fromId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "fromProperty": "circle3",
+                        "toId": "d6b15a76-028d-57a8-eff5-096cc0c6ace3",
+                        "toProperty": "width"
+                    },
+                    {
+                        "fromId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "fromProperty": "heartrate",
+                        "toId": "d78583d3-d74b-241d-de1b-a35a7c4b6ad6",
+                        "toProperty": "heartrate"
+                    },
+                    {
+                        "fromId": "d78583d3-d74b-241d-de1b-a35a7c4b6ad6",
+                        "fromProperty": "result",
+                        "toId": "0adfe0b2-1603-8bdf-ecb1-fb7c45cbc5e6",
+                        "toProperty": "duration"
+                    },
+                    {
+                        "fromId": "0adfe0b2-1603-8bdf-ecb1-fb7c45cbc5e6",
+                        "fromProperty": "timerFinished",
+                        "toId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "toProperty": "to-big"
+                    },
+                    {
+                        "fromId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "fromProperty": "reached-big",
+                        "toId": "d678866a-2346-8d5a-9c1e-72fca196d7b1",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "d678866a-2346-8d5a-9c1e-72fca196d7b1",
+                        "fromProperty": "timerFinished",
+                        "toId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "toProperty": "to-small"
+                    },
+                    {
+                        "fromId": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "fromProperty": "reached-small",
+                        "toId": "0adfe0b2-1603-8bdf-ecb1-fb7c45cbc5e6",
+                        "toProperty": "restart"
+                    },
+                    {
+                        "fromId": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "fromProperty": "completed",
+                        "toId": "0f6fbc0d-6305-6299-c890-9119f046fbfc",
+                        "toProperty": "on"
+                    },
+                    {
+                        "fromId": "0f6fbc0d-6305-6299-c890-9119f046fbfc",
+                        "fromProperty": "switchedToOn",
+                        "toId": "0adfe0b2-1603-8bdf-ecb1-fb7c45cbc5e6",
+                        "toProperty": "start"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
+                        "type": "Group",
+                        "label": "Root",
+                        "x": 390.46085958504136,
+                        "y": 154.1510351520016,
+                        "parameters": {
+                            "fill": "parent"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "fa90ea16-1232-0437-deea-5dd6263d8247",
+                                "type": "Rectangle",
+                                "label": "Background",
+                                "x": 20,
+                                "y": 61,
+                                "parameters": {
+                                    "color": "#222222"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "2da3cdd1-7537-dff5-ac23-50a26f3324d4",
+                                "type": "Stack Layout",
+                                "x": 20,
+                                "y": 122,
+                                "parameters": {
+                                    "sizeMode": "childSize",
+                                    "alignX": "center",
+                                    "y": -300,
+                                    "alignY": "bottom"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "31988247-d925-567b-2dad-399d41a16eb7",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 422.66570986833494,
+                                        "y": 343.5095231477653,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "y": 0
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c2878258-5c18-766a-4674-0d24e5055ff6",
+                                "type": "Group",
+                                "version": 2,
+                                "label": "button",
+                                "x": 20,
+                                "y": 183,
+                                "parameters": {
+                                    "height": {
+                                        "value": 200,
+                                        "unit": "px"
+                                    },
+                                    "alignY": "bottom"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "ae4ee104-bd24-1b77-1e79-7bf1852ffbfc",
+                                        "type": "HTML Content",
+                                        "x": 20,
+                                        "y": 61,
+                                        "parameters": {
+                                            "html": "<!DOCTYPE html>\n<a href=\"4でコピーしたURL\" target=\"_blank\"><div id=\"fetchCode\"></div></a>",
+                                            "width": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "48372f67-bbac-faa4-710b-8b4270faf156",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 107,
+                                        "parameters": {
+                                            "text": "GO!",
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "fontSize": 100,
+                                            "color": "#FF5912",
+                                            "touchPropagation": true
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7434da51-1ebb-99f1-abe8-bd88d9099459",
+                                "type": "Group",
+                                "version": 2,
+                                "x": 20,
+                                "y": 500,
+                                "parameters": {
+                                    "sizeMode": "explicit",
+                                    "width": {
+                                        "value": 800,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 800,
+                                        "unit": "px"
+                                    },
+                                    "alignX": "center",
+                                    "alignY": "center"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "d6b15a76-028d-57a8-eff5-096cc0c6ace3",
+                                        "type": "Circle",
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "width": {
+                                                "value": 460,
+                                                "unit": "px"
+                                            },
+                                            "color": "#F02B60",
+                                            "opacity": 0.3
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "d85644af-a407-c02c-6cca-48eab5ff6c5e",
+                                        "type": "Circle",
+                                        "x": 20,
+                                        "y": 128,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "width": {
+                                                "value": 440,
+                                                "unit": "px"
+                                            },
+                                            "color": "#F02B60",
+                                            "opacity": 0.3
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "1204d935-11f3-3349-a170-759b01b05506",
+                                        "type": "Circle",
+                                        "x": 20,
+                                        "y": 210,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "width": {
+                                                "value": 420,
+                                                "unit": "px"
+                                            },
+                                            "color": "#F02B60",
+                                            "opacity": 0.3
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "478dce9b-5395-6509-e3ac-7304adcb3bc4",
+                                        "type": "Circle",
+                                        "x": 20,
+                                        "y": 184,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "width": {
+                                                "value": 400,
+                                                "unit": "px"
+                                            },
+                                            "color": "#F02B60"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "1e2a1cd6-614b-79ac-e2aa-cb360ea68b84",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 230,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "y": 0,
+                                            "alignY": "center",
+                                            "fontSize": 80
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "0eeb77b2-af4d-16b9-88e7-f131c8b23d2a",
+                        "type": "REST",
+                        "x": -137.71210873428439,
+                        "y": 377.49622280380623,
+                        "parameters": {
+                            "resource": "/fitbittest/noodlin/heartbeat",
+                            "backendEndpoint": "\benebularのhttpNodePathを入力",
+                            "code": "define({\n\t// The input ports of the REST node, name of input and type\n\tinputs:{\n\t    //ExampleInput:'number',\n\t},\n\t\n\t// The output ports of the REST node, name of output and type\n\toutputs:{\n\t    //ExampleOutput:'string',\n\t    heartrate:\"number\",\n\t    time:\"string\"\n\t},\n\t\n\t//Add custom code to setup the request object before the request\n\t//is made.\n\t//\n\t//*request.resource     contains the resource path of the request.\n\t//*request.method       contains the method, GET, POST, PUT or DELETE.\n\t//*request.headers      is a map where you can add additional headers.\n\t//*request.parameters   is a map the parameters that will be appended\n\t//                      to the url.\n\t//*request.content      contains the content of the request as a javascript\n\t//                      object.\n\t//\n\t// The inputs and outputs maps can also be accessed via *this.inputs and\n\t// *this.outputs.\n\trequest:function(inputs,request) {\n\t},\n\t\n\t// Add custom code to convert the response content to outputs\n\t//\n\t//*response.status    The status code of the response\n\t//*response.content   The content of the response as a javascript\n\t//                    object.\n\t//*response.request   The request object that resulted in the response.\n\t//\n\t// The inputs and outputs maps can also be accessed via *this.inputs and\n\t// *this.outputs.\n\tresponse:function(outputs,response) {\n\t    console.log(response.content);\n\t    var data = response.content[\"activities-heart-intraday\"][\"dataset\"];\n\t    outputs.heartrate = data[data.length-1][\"value\"];\n\t    outputs.time = data[data.length-1][\"time\"];\n\t}\n})\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "heartrate",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 13
+                            },
+                            {
+                                "name": "time",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 14
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "988fa22c-eae3-7c7b-0e4c-1ceeef9813c9",
+                        "type": "CSS Definition",
+                        "x": -130.3867151935053,
+                        "y": 173.4015543771745,
+                        "parameters": {
+                            "style": "#fetchCode{ background: #FFFB00;\n    widgh:100%;\n    height:100%;\n}"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "d25b822d-7926-34cb-8dbb-2d171e0fffac",
+                        "type": "Receive Message",
+                        "x": -135.16840592776907,
+                        "y": 243.1614958164891,
+                        "parameters": {
+                            "topic": "/fetchedToken"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "b096e013-883f-8459-4937-fb04258e6b12",
+                        "type": "Timer",
+                        "x": 164.47084522058773,
+                        "y": 286.143638215484,
+                        "parameters": {
+                            "duration": 60000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "8123ea85-b179-19c0-3031-2e2cd73cb84e",
+                        "type": "States",
+                        "x": 83.24152419859652,
+                        "y": 765.5910122503966,
+                        "parameters": {
+                            "values": "circle1,circle2,circle3",
+                            "states": "small,big",
+                            "value-small-circle1": 400,
+                            "value-small-circle2": 400,
+                            "value-small-circle3": 400,
+                            "value-big-circle1": 440,
+                            "value-big-circle2": 480,
+                            "value-big-circle3": 520,
+                            "startState": "small"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "number",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "output",
+                                "group": "Values",
+                                "name": "circle1",
+                                "index": 6
+                            },
+                            {
+                                "type": {
+                                    "name": "number",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "output",
+                                "group": "Values",
+                                "name": "circle2",
+                                "index": 7
+                            },
+                            {
+                                "type": {
+                                    "name": "number",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "output",
+                                "group": "Values",
+                                "name": "circle3",
+                                "index": 8
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "small Values",
+                                "name": "value-small-circle1",
+                                "displayName": "circle1",
+                                "editorName": "small|circle1",
+                                "index": 9
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "small Values",
+                                "name": "value-small-circle2",
+                                "displayName": "circle2",
+                                "editorName": "small|circle2",
+                                "index": 10
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "small Values",
+                                "name": "value-small-circle3",
+                                "displayName": "circle3",
+                                "editorName": "small|circle3",
+                                "index": 11
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "easeOut",
+                                            "label": "Ease Out"
+                                        },
+                                        {
+                                            "value": "easeIn",
+                                            "label": "Ease In"
+                                        },
+                                        {
+                                            "value": "linear",
+                                            "label": "Linear"
+                                        },
+                                        {
+                                            "value": "easeInOut",
+                                            "label": "Ease In Out"
+                                        },
+                                        {
+                                            "value": "cubicBezier",
+                                            "label": "Cubic Bezier"
+                                        }
+                                    ]
+                                },
+                                "default": "easeOut",
+                                "displayName": "Easing Curve",
+                                "group": "small Transition",
+                                "name": "transition-small",
+                                "index": 12
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "default": 300,
+                                "displayName": "Duration",
+                                "group": "small Transition",
+                                "name": "duration-small",
+                                "index": 13
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean",
+                                    "allowConnectionsOnly": true
+                                },
+                                "displayName": "To small",
+                                "name": "to-small",
+                                "group": "Go to state",
+                                "index": 14
+                            },
+                            {
+                                "plug": "output",
+                                "type": "boolean",
+                                "displayName": "At small",
+                                "name": "at-small",
+                                "group": "Current state",
+                                "index": 15
+                            },
+                            {
+                                "plug": "output",
+                                "type": "signal",
+                                "displayName": "Has Reached small",
+                                "name": "reached-small",
+                                "group": "Current state",
+                                "index": 16
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "big Values",
+                                "name": "value-big-circle1",
+                                "displayName": "circle1",
+                                "editorName": "big|circle1",
+                                "index": 17
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "big Values",
+                                "name": "value-big-circle2",
+                                "displayName": "circle2",
+                                "editorName": "big|circle2",
+                                "index": 18
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "big Values",
+                                "name": "value-big-circle3",
+                                "displayName": "circle3",
+                                "editorName": "big|circle3",
+                                "index": 19
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "easeOut",
+                                            "label": "Ease Out"
+                                        },
+                                        {
+                                            "value": "easeIn",
+                                            "label": "Ease In"
+                                        },
+                                        {
+                                            "value": "linear",
+                                            "label": "Linear"
+                                        },
+                                        {
+                                            "value": "easeInOut",
+                                            "label": "Ease In Out"
+                                        },
+                                        {
+                                            "value": "cubicBezier",
+                                            "label": "Cubic Bezier"
+                                        }
+                                    ]
+                                },
+                                "default": "easeOut",
+                                "displayName": "Easing Curve",
+                                "group": "big Transition",
+                                "name": "transition-big",
+                                "index": 20
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "default": 300,
+                                "displayName": "Duration",
+                                "group": "big Transition",
+                                "name": "duration-big",
+                                "index": 21
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean",
+                                    "allowConnectionsOnly": true
+                                },
+                                "displayName": "To big",
+                                "name": "to-big",
+                                "group": "Go to state",
+                                "index": 22
+                            },
+                            {
+                                "plug": "output",
+                                "type": "boolean",
+                                "displayName": "At big",
+                                "name": "at-big",
+                                "group": "Current state",
+                                "index": 23
+                            },
+                            {
+                                "plug": "output",
+                                "type": "signal",
+                                "displayName": "Has Reached big",
+                                "name": "reached-big",
+                                "group": "Current state",
+                                "index": 24
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        "small",
+                                        "big"
+                                    ]
+                                },
+                                "group": "States",
+                                "displayName": "Start at",
+                                "name": "startState",
+                                "default": "small",
+                                "index": 25
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "0adfe0b2-1603-8bdf-ecb1-fb7c45cbc5e6",
+                        "type": "Timer",
+                        "x": -183.3055347592387,
+                        "y": 614.0747619760097,
+                        "parameters": {
+                            "duration": 60
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "d78583d3-d74b-241d-de1b-a35a7c4b6ad6",
+                        "type": "Expression",
+                        "x": 155.8311138696665,
+                        "y": 548.3205075823452,
+                        "parameters": {
+                            "expression": "(heartrate/60)*1000"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "heartrate",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "d678866a-2346-8d5a-9c1e-72fca196d7b1",
+                        "type": "Timer",
+                        "x": -306.5271868192558,
+                        "y": 837.4239928509663,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "0f6fbc0d-6305-6299-c890-9119f046fbfc",
+                        "type": "Switch",
+                        "x": -400.3299759274936,
+                        "y": 475.6226830652307,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "devices": "Default Device",
+        "Default Device.fillMode": "aspectFit",
+        "Default Device.canvasWidth": 1080,
+        "Default Device.canvasHeight": 1920,
+        "mqttUseExternalBroker": true,
+        "mqttBrokerUrl": "wss://ユーザー名:パスワード@broker.shiftr.io"
+    },
+    "rootNodeId": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
+    "version": "1"
+}
